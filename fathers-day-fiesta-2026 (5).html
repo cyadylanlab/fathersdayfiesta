@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Father’s Day Fiesta 2026 | All-Star Tournament</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --gold:#F5C518;--gold-dark:#C9A30A;--gold-light:#FFE066;
+  --bg:#0A0A0A;--bg2:#111;--bg3:#1A1A1A;
+  --text:#F0EDE6;--text-dim:#9A9590;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Barlow',sans-serif;overflow-x:hidden;line-height:1.7}
+
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:
+  radial-gradient(ellipse 80% 50% at 50% 40%,rgba(245,197,24,0.07) 0%,transparent 70%),
+  repeating-linear-gradient(0deg,transparent,transparent 50px,rgba(245,197,24,0.012) 50px,rgba(245,197,24,0.012) 51px),
+  repeating-linear-gradient(90deg,transparent,transparent 50px,rgba(245,197,24,0.012) 50px,rgba(245,197,24,0.012) 51px);
+  pointer-events:none}
+.hero-logo{width:min(400px,75vw);filter:drop-shadow(0 0 50px rgba(245,197,24,0.25));animation:logoIn 1.2s ease-out both}
+@keyframes logoIn{from{opacity:0;transform:scale(0.85) translateY(30px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.hero-date{font-family:'Oswald',sans-serif;font-size:clamp(1.1rem,3vw,1.5rem);letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-top:2rem;animation:fadeUp .8s .4s ease-out both}
+.hero-location{font-family:'Barlow',sans-serif;font-size:clamp(.9rem,2vw,1.05rem);color:var(--text-dim);margin-top:.4rem;letter-spacing:.12em;animation:fadeUp .8s .6s ease-out both}
+.hero-cta{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;animation:fadeUp .8s .8s ease-out both}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 2.2rem;font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .3s}
+.btn-primary{background:var(--gold);color:#0A0A0A;clip-path:polygon(0 0,100% 0,96% 100%,0% 100%)}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,197,24,.3)}
+.btn-secondary{background:transparent;color:var(--gold);border:1.5px solid var(--gold);clip-path:polygon(4% 0,100% 0,100% 100%,0% 100%)}
+.btn-secondary:hover{background:rgba(245,197,24,.1);transform:translateY(-2px)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.scroll-hint{position:absolute;bottom:2rem;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+.scroll-hint svg{width:24px;height:24px;stroke:var(--gold);opacity:.4}
+
+/* UTILITY */
+section{padding:5rem 2rem}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(1.8rem,4.5vw,2.6rem);text-transform:uppercase;letter-spacing:.06em;text-align:center;margin-bottom:.4rem}
+.section-title span{color:var(--gold)}
+.gold-line{width:50px;height:3px;background:var(--gold);margin:.8rem auto 2rem}
+p+p{margin-top:1rem}
+.body-copy{color:var(--text-dim);font-size:1rem;line-height:1.8}
+.body-copy strong{color:var(--text)}
+
+/* PHOTO SECTION - full bleed bg with content overlay */
+.photo-bg{position:relative;overflow:hidden}
+.photo-bg .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-bg .bg-overlay{position:absolute;inset:0}
+.photo-bg .bg-content{position:relative;z-index:2}
+
+/* PHOTO BREAK - cinematic divider */
+.photo-break{position:relative;height:420px;overflow:hidden}
+.photo-break .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-break .bg-overlay{position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0%,rgba(10,10,10,.35) 20%,rgba(10,10,10,.35) 80%,var(--bg) 100%)}
+.photo-break-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;text-align:center;padding:2rem}
+.photo-break-text p{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,3vw,1.8rem);letter-spacing:.15em;text-transform:uppercase;color:var(--gold);text-shadow:0 2px 30px rgba(0,0,0,.9)}
+@media(max-width:600px){.photo-break{height:300px}}
+
+/* WELCOME */
+.welcome-wrap{position:relative;overflow:hidden}
+.welcome-wrap .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.08;filter:grayscale(.8)}
+.welcome-wrap .bg-overlay{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 40%,transparent 100%)}
+.welcome-inner{max-width:780px;margin:0 auto;text-align:center;position:relative;z-index:2}
+
+/* WHAT TO EXPECT */
+.expect-wrap{position:relative;overflow:hidden}
+.expect-wrap .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.07;filter:grayscale(.7)}
+.expect-wrap .bg-overlay{position:absolute;inset:0;background:linear-gradient(270deg,var(--bg2) 35%,rgba(17,17,17,.95) 100%)}
+.expect-inner{max-width:780px;margin:0 auto;position:relative;z-index:2}
+
+/* CHAMPION PHOTO - standalone feature */
+.champion-feature{max-width:860px;margin:2.5rem auto 0;position:relative}
+.champion-feature img{width:100%;display:block;border:1px solid rgba(245,197,24,.12)}
+.champion-feature .caption{font-family:'Barlow',sans-serif;font-size:.78rem;color:var(--text-dim);text-align:center;margin-top:.6rem;letter-spacing:.06em;text-transform:uppercase;opacity:.6}
+
+/* AGE TABLE */
+.age-section{background:var(--bg)}
+.age-table-wrap{max-width:700px;margin:0 auto;overflow-x:auto}
+table.age-table{width:100%;border-collapse:collapse;font-size:.95rem}
+table.age-table thead{background:rgba(245,197,24,.1)}
+table.age-table th{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-weight:600;padding:.9rem 1rem;text-align:left;color:var(--gold);border-bottom:2px solid rgba(245,197,24,.2);font-size:.85rem}
+table.age-table td{padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--text-dim)}
+table.age-table tr:hover td{background:rgba(245,197,24,.03);color:var(--text)}
+table.age-table td:nth-child(3),table.age-table td:nth-child(4){font-family:'Oswald',sans-serif;color:var(--text);font-size:1.05rem}
+.early-bird{max-width:700px;margin:2rem auto 0;background:linear-gradient(135deg,rgba(245,197,24,.08),rgba(245,197,24,.02));border:1px solid rgba(245,197,24,.15);padding:1.3rem 1.8rem;text-align:center;font-size:.95rem;color:var(--text-dim)}
+.early-bird strong{color:var(--gold);font-family:'Oswald',sans-serif;letter-spacing:.04em}
+.early-bird a{color:var(--gold);text-decoration:none}
+.early-bird a:hover{text-decoration:underline}
+
+/* ACCORDION */
+.details-wrap{position:relative;overflow:hidden}
+.details-wrap .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.05;filter:grayscale(1)}
+.details-wrap .bg-overlay{position:absolute;inset:0;background:var(--bg2);opacity:.92}
+.details-grid{max-width:780px;margin:0 auto;position:relative;z-index:2}
+.detail-item{border-bottom:1px solid rgba(245,197,24,.08)}
+.detail-header{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 0;cursor:pointer;font-family:'Oswald',sans-serif;font-size:1.05rem;letter-spacing:.05em;text-transform:uppercase;transition:color .3s;user-select:none}
+.detail-header:hover{color:var(--gold)}
+.detail-header .icon{color:var(--gold);font-size:1.3rem;transition:transform .3s}
+.detail-header.active .icon{transform:rotate(45deg)}
+.detail-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.detail-body-inner{padding:0 0 1.5rem;color:var(--text-dim);line-height:1.8;font-size:.95rem}
+.detail-body-inner a{color:var(--gold);text-decoration:none}
+.detail-body-inner a:hover{text-decoration:underline}
+.detail-body-inner ul{list-style:none;padding-left:0;margin-top:.5rem}
+.detail-body-inner li{padding:.3rem 0 .3rem 1.2rem;position:relative}
+.detail-body-inner li::before{content:'▸';position:absolute;left:0;color:var(--gold)}
+
+/* FORMS */
+.forms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;max-width:780px;margin:0 auto}
+.form-card{background:var(--bg2);border:1px solid rgba(245,197,24,.08);padding:1.3rem 1.2rem;display:flex;align-items:center;gap:1rem;transition:all .3s;text-decoration:none;color:var(--text)}
+.form-card:hover{border-color:var(--gold);background:var(--bg3);transform:translateY(-2px)}
+.form-card .fc-icon{width:38px;height:38px;background:rgba(245,197,24,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.form-card .fc-icon svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:2}
+.form-card .fc-text{font-family:'Barlow',sans-serif;font-size:.88rem;font-weight:500}
+
+/* CONTACT */
+.contact-section{background:var(--bg2)}
+.contact-grid{max-width:780px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2rem;text-align:center}
+.contact-card h3{font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:.05em;color:var(--gold);margin-bottom:.4rem}
+.contact-card p{color:var(--text-dim);font-size:.88rem}
+.contact-card a{color:var(--text);text-decoration:none;transition:color .3s}
+.contact-card a:hover{color:var(--gold)}
+
+/* REGISTER CTA */
+.register-cta{position:relative;text-align:center;padding:5rem 2rem;overflow:hidden}
+.register-cta .bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.1;filter:grayscale(.6)}
+.register-cta .bg-overlay{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(245,197,24,.06),var(--bg) 70%)}
+.register-cta .bg-content{position:relative;z-index:2}
+.register-cta p{color:var(--text-dim);margin-bottom:2rem;font-size:1rem;max-width:500px;margin-left:auto;margin-right:auto}
+
+footer{background:var(--bg2);border-top:1px solid rgba(245,197,24,.08);text-align:center;padding:2rem;color:var(--text-dim);font-size:.78rem;letter-spacing:.04em}
+footer a{color:var(--gold);text-decoration:none}
+
+@media(max-width:600px){
+  section{padding:3.5rem 1.5rem}
+  .hero-cta{flex-direction:column;align-items:center}
+  .btn{width:260px;justify-content:center}
+  table.age-table{font-size:.85rem}
+  table.age-table th,table.age-table td{padding:.6rem}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-logo" src="images/logo.webp" alt="Father’s Day Fiesta All-Star Tournament">
+  <p class="hero-date">June 20 – 21, 2026</p>
+  <p class="hero-location">Centreville &amp; Chantilly, Virginia</p>
+  <div class="hero-cta">
+    <a href="https://playmetrics.com/signup?clubToken=U2lnbnVwLkdCLlYyLTEwODItVmlyZ2luaWEgVmFsb3IgVG91cm5hbWVudHMtaHR0cHM6Ly9hcGkuZ2IucGxheW1ldHJpY3MuY29tL3B1YmxpYy9nYnMvMTA4Mi9sb2dvLTE3NzQ2NDYxMDF8VVN4Ujhrd3dDc2RWZVR6R3NOb0NOY1hxdGNrM05wOFlKVWY5NDVyTEFrMD0=&program_id=1730" class="btn btn-primary" target="_blank">Register Your Team</a>
+    <a href="#about" class="btn btn-secondary">Learn More</a>
+  </div>
+  <div class="scroll-hint"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+</section>
+
+<!-- WELCOME - mascot photo as subtle bg -->
+<section class="welcome-wrap" id="about" style="padding:5rem 2rem">
+  <img class="bg-img" src="images/mascot.webp" alt="">
+  <div class="bg-overlay"></div>
+  <div class="welcome-inner">
+    <h2 class="section-title">Welcome to <span>the Fiesta</span></h2>
+    <div class="gold-line"></div>
+    <p class="body-copy">Virginia Valor FC, in partnership with SYA and CYA Soccer, invites your club to the <strong>Father’s Day Fiesta All-Star Tournament</strong>. This event is built for recreational and rec all-star teams from across Northern Virginia and beyond.</p>
+    <p class="body-copy">This is not a travel showcase or an ID camp. It is for the teams that show up week after week because they enjoy playing together. The families who are on the sidelines every weekend. The volunteer coaches who give their time to make it all happen.</p>
+    <p class="body-copy">Over the course of two days, teams will play competitive, well-organized games in a positive and welcoming environment. With Father’s Day as the backdrop, it is a weekend that brings together good soccer and time with family.</p>
+    <p class="body-copy">Whether your team has been together for years or just finished their first season, the Fiesta is a great way to close out the spring. It is a chance to compete, represent your club, and create some lasting memories along the way.</p>
+  </div>
+</section>
+
+<!-- PHOTO BREAK - team group shot -->
+<div class="photo-break">
+  <img class="bg-img" src="images/team-group.webp" alt="Tournament team">
+  <div class="bg-overlay"></div>
+</div>
+
+<!-- WHAT TO EXPECT - blue kit kids as subtle bg -->
+<section class="expect-wrap" style="padding:5rem 2rem">
+  <img class="bg-img" src="images/between-games.webp" alt="">
+  <div class="bg-overlay"></div>
+  <div class="expect-inner">
+    <h2 class="section-title">What to <span>Expect</span></h2>
+    <div class="gold-line"></div>
+    <p class="body-copy">We have been running youth soccer in this community for a long time, and we have put together every detail of this tournament with that experience behind it. Here is what your team and families can look forward to:</p>
+    <p class="body-copy"><strong>Competitive, fair brackets.</strong> We group teams thoughtfully so every game is a good one. No blowouts, no walkovers — real competition at every level from U8 through U19.</p>
+    <p class="body-copy"><strong>Well-maintained fields.</strong> All games are played across SYA and CYA’s home complexes in Centreville and Chantilly — fields our clubs know and maintain year-round.</p>
+    <p class="body-copy"><strong>Professionally managed.</strong> Licensed referees, clear schedules, on-site tournament HQ at every location, and a staff that has been doing this for years. Your job is to coach and cheer. We will handle everything else.</p>
+    <p class="body-copy"><strong>A real weekend event.</strong> This is more than a few games stapled together. It is a full tournament weekend with awards, team photos, and the kind of atmosphere that makes your players feel like they are part of something special.</p>
+
+    <div class="champion-feature">
+      <img src="images/champions.webp" alt="Father’s Day Fiesta Champions and Finalists">
+      <p class="caption">2025 Father’s Day Fiesta — Champions &amp; Finalists</p>
+    </div>
+  </div>
+</section>
+
+<!-- AGE GROUPS -->
+<section class="age-section" id="pricing">
+  <h2 class="section-title">Age Groups <span>&amp; Cost</span></h2>
+  <div class="gold-line"></div>
+  <p class="body-copy" style="text-align:center;max-width:600px;margin:0 auto 2rem">Boys and girls divisions at every age group. All teams are guaranteed a minimum of three games across the weekend.</p>
+  <div class="age-table-wrap">
+    <table class="age-table">
+      <thead><tr><th>Age Group</th><th>Birth Year</th><th>Cost</th><th>Game Length</th></tr></thead>
+      <tbody>
+        <tr><td>U8</td><td>2018</td><td>$475</td><td>40 min</td></tr>
+        <tr><td>U9</td><td>2017</td><td>$525</td><td>60 min</td></tr>
+        <tr><td>U10</td><td>2016</td><td>$525</td><td>60 min</td></tr>
+        <tr><td>U11</td><td>2015</td><td>$575</td><td>60 min</td></tr>
+        <tr><td>U12</td><td>2014</td><td>$575</td><td>60 min</td></tr>
+        <tr><td>U13</td><td>2013</td><td>$625</td><td>60 min</td></tr>
+        <tr><td>U14</td><td>2012</td><td>$625</td><td>60 min</td></tr>
+        <tr><td>U16</td><td>2010 / 2009</td><td>$680</td><td>70 min</td></tr>
+        <tr><td>U19</td><td>2008 / 07 / 06</td><td>$700</td><td>70 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="early-bird">
+    <strong>Early Bird: Save $25 per team</strong><br>
+    Register before the early bird deadline and save. Clubs registering 10 or more teams — <a href="/cdn-cgi/l/email-protection#780c170d0a1619151d160c0b380e110a1f111611190e1914170a1e1b56170a1f">reach out to us</a> for an additional club-wide discount.
+  </div>
+</section>
+
+<!-- PHOTO BREAK - sideline watching -->
+<div class="photo-break">
+  <img class="bg-img" src="images/sideline-watching.webp" alt="Players watching from the sideline">
+  <div class="bg-overlay"></div>
+  <div class="photo-break-text">
+    <p>For the love of the game</p>
+  </div>
+</div>
+
+<!-- TOURNAMENT DETAILS - SYA thumbs up as subtle bg -->
+<section class="details-wrap" style="padding:5rem 2rem">
+  <img class="bg-img" src="images/sya-thumbs.webp" alt="">
+  <div class="bg-overlay"></div>
+  <h2 class="section-title" style="position:relative;z-index:2">Tournament <span>Details</span></h2>
+  <div class="gold-line" style="position:relative;z-index:2"></div>
+  <div class="details-grid">
+    <div class="detail-item">
+      <div class="detail-header" onclick="toggleDetail(this)">Who Can Play? <span class="icon">+</span></div>
+      <div class="detail-body"><div class="detail-body-inner">
+        The Father’s Day Fiesta is open to <strong>recreational and rec all-star teams only</strong>. This is a tournament built for the recreational soccer community — no travel or club teams. Boys and girls divisions are available at every age group from U8 through U19.
+      </div></div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-header" onclick="toggleDetail(this)">Roster Entry — Deadline June 7 <span class="icon">+</span></div>
+      <div class="detail-body"><div class="detail-body-inner">
+        Log in to your PlayMetrics account and follow these steps:
+        <ul>
+          <li>Go to <strong>“My Teams”</strong> (do not click the purple “Register” button — your team is already registered)</li>
+          <li>Click your team name, then <strong>“Manage Roster”</strong></li>
+          <li>Enter each player’s name, date of birth, and jersey number</li>
+          <li>Add contact info for coaches, assistant coaches, and team managers</li>
+          <li>Use the <strong>“More Actions”</strong> tab to edit jersey numbers after entry</li>
+        </ul>
+      </div></div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-header" onclick="toggleDetail(this)">Game-Day Check-In — Saturday, June 20 <span class="icon">+</span></div>
+      <div class="detail-body"><div class="detail-body-inner">
+        Before your first game, stop by your game site’s tournament HQ to check in. You will need to bring:
+        <ul>
+          <li><strong>Official team roster</strong> signed by your club administrator. You can use our roster form or your own club’s version — just make sure it has a verifying club signature. Every player needs a unique jersey number (tape or marker is fine).</li>
+          <li><strong>Team check-in form</strong> — coaches will certify on this form that they have completed, signed medical release forms in their possession for every rostered player and will carry them at every game.</li>
+        </ul>
+      </div></div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-header" onclick="toggleDetail(this)">Medical Release Policy <span class="icon">+</span></div>
+      <div class="detail-body"><div class="detail-body-inner">
+        <strong>New this year:</strong> We are not collecting medical release forms at check-in. Instead, coaches will certify on the team check-in form that they have a signed medical release for every rostered player and will have those forms on hand at every game. Our tournament form, your club’s form, or any standard medical release form will work.
+      </div></div>
+    </div>
+    <div class="detail-item">
+      <div class="detail-header" onclick="toggleDetail(this)">Fields &amp; Locations <span class="icon">+</span></div>
+      <div class="detail-body"><div class="detail-body-inner">
+        Games will be played across SYA and CYA field complexes in Centreville and Chantilly. Detailed field maps, parking information, and site-specific tournament HQ locations will be sent to all registered teams before the tournament. <a href="https://www.virginiavalorfc.org/fieldinformation">View general field info →</a>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMS -->
+<section>
+  <h2 class="section-title">Forms <span>&amp;</span> Documents</h2>
+  <div class="gold-line"></div>
+  <div class="forms-grid">
+    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_802834508f9a4a1b8ee27e308572eb01.pdf" class="form-card" target="_blank">
+      <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <div class="fc-text">Team Check-In Form</div>
+    </a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/e52530_048f8f27f72b4f61beedcc4c34941e0e.docx?dn=Fiesta%20All%20Star%20FDT%20Official%20Roster.docx" class="form-card" target="_blank">
+      <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg></div>
+      <div class="fc-text">Official Roster Form</div>
+    </a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_2b9186b2d1e647469e082184fc3af840.docx?dn=FiestaMedRelease%20SINGLE%20PLAYER%5B2025%5D.docx" class="form-card" target="_blank">
+      <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="fc-text">Medical Release — Word</div>
+    </a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_e6b79d522a4d49ac930f363b1b0a60dd.pdf" class="form-card" target="_blank">
+      <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="fc-text">Medical Release — PDF</div>
+    </a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/e52530_f98cb61dca234b7180def349d7ee221f.pdf" class="form-card" target="_blank">
+      <div class="fc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg></div>
+      <div class="fc-text">Tournament Rules</div>
+    </a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_c67b5f7bd36e4ed298673643fd2237c0.pdf" class="form-card" target="_blank">
+      <div class="fc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+      <div class="fc-text">VYSA Permission to Host</div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contact-section">
+  <h2 class="section-title">Tournament <span>Contacts</span></h2>
+  <div class="gold-line"></div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Tournament Director</h3>
+      <p>Paul Ellis</p>
+      <p><a href="/cdn-cgi/l/email-protection#b4c0dbc1c6dad5d9d1dac0c7f4c2ddc6d3dddaddd5c2d5d8dbc6d2d79adbc6d3"><span class="__cf_email__" data-cfemail="20544f55524e414d454e54536056495247494e494156414c4f5246430e4f5247">[email&#160;protected]</span></a></p>
+    </div>
+    <div class="contact-card">
+      <h3>Referee Assignor</h3>
+      <p>Alan Lotta</p>
+      <p><a href="/cdn-cgi/l/email-protection#99fae0f8eaf6fafcebfcffd9f8f6f5b7faf6f4"><span class="__cf_email__" data-cfemail="1f7c667e6c707c7a6d7a795f7e7073317c7072">[email&#160;protected]</span></a></p>
+    </div>
+    <div class="contact-card">
+      <h3>Official Apparel</h3>
+      <p>Simax Sports</p>
+      <p><a href="/cdn-cgi/l/email-protection#89faecfbffe0eaecc9fae0e4e8f1faf9e6fbfdfaa7eae6e4"><span class="__cf_email__" data-cfemail="b2c1d7c0c4dbd1d7f2c1dbdfd3cac1c2ddc0c6c19cd1dddf">[email&#160;protected]</span></a></p>
+      <p>866-201-6400</p>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER CTA - team photo bg -->
+<section class="register-cta">
+  <img class="bg-img" src="images/team-group.webp" alt="">
+  <div class="bg-overlay"></div>
+  <div class="bg-content">
+    <h2 class="section-title">Bring <span>Your Team</span></h2>
+    <p>Spots are limited and fill quickly. Get your team registered and we will see you on Father’s Day weekend.</p>
+    <a href="https://playmetrics.com/signup?clubToken=U2lnbnVwLkdCLlYyLTEwODItVmlyZ2luaWEgVmFsb3IgVG91cm5hbWVudHMtaHR0cHM6Ly9hcGkuZ2IucGxheW1ldHJpY3MuY29tL3B1YmxpYy9nYnMvMTA4Mi9sb2dvLTE3NzQ2NDYxMDF8VVN4Ujhrd3dDc2RWZVR6R3NOb0NOY1hxdGNrM05wOFlKVWY5NDVyTEFrMD0=&program_id=1730" class="btn btn-primary" target="_blank">Register Your Team</a>
+  </div>
+</section>
+
+<footer>
+  <p>Presented by SYA &amp; CYA Soccer &bull; Professionally managed by <a href="https://www.virginiavalorfc.org">Virginia Valor FC</a></p>
+  <p style="margin-top:.3rem">Virginia Valor FC is a registered 501(c)(3) nonprofit organization dedicated to developing youth soccer players.</p>
+  <p st
