@@ -110,6 +110,12 @@ img{max-width:100%}
 .accordion-body-inner p{margin-bottom:12px}.accordion-body-inner p:last-child{margin-bottom:0}
 
 .docs-section{background:var(--cream)}
+.roster-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:24px;padding:24px 28px;background:linear-gradient(135deg,#1a1a1a,#2a2520);border:1px solid var(--gold);border-radius:10px}
+.roster-cta-text h3{font-family:var(--font-display);font-size:1.5rem;letter-spacing:1px;color:#fff;margin-bottom:4px}
+.roster-cta-text p{color:rgba(255,255,255,.72);font-size:.95rem;max-width:560px;margin:0}
+.roster-cta-btn{display:inline-flex;align-items:center;gap:10px;flex-shrink:0;padding:14px 30px;background:var(--yellow);color:var(--black);font-family:var(--font-display);font-size:1.15rem;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:6px;transition:transform .12s,box-shadow .12s;box-shadow:0 6px 20px rgba(245,197,24,.3)}
+.roster-cta-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(245,197,24,.42)}
+@media(max-width:600px){.roster-cta{flex-direction:column;text-align:center;align-items:center}.roster-cta-btn{width:100%;justify-content:center}}
 .docs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
 .doc-card{display:flex;align-items:center;gap:14px;padding:18px 20px;background:#fff;border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text);transition:all .2s}.doc-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06);color:var(--text)}
 .doc-type{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-condensed);font-weight:700;font-size:.72rem;letter-spacing:.5px;color:#fff}
@@ -472,9 +478,19 @@ img{max-width:100%}
 
 <section class="section docs-section" id="documents">
   <div class="section-label">Downloads</div><h2 class="section-title">Forms &amp; Documents</h2><div class="gold-line"></div>
+  <div class="roster-cta">
+    <div class="roster-cta-text">
+      <h3>Ready to submit your roster?</h3>
+      <p>Download the official roster below (Word or fillable PDF), fill it out, then submit it online. You'll get an email confirmation right away.</p>
+    </div>
+    <a href="https://www.virginiavalorfc.org/2026-fathers-day-roster-form" target="_blank" class="roster-cta-btn">Submit Your Roster
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
   <div class="docs-grid">
     <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_802834508f9a4a1b8ee27e308572eb01.pdf" target="_blank" class="doc-card"><div class="doc-type pdf">PDF</div><div class="doc-info"><h3>Team Check-In Form</h3><p>Required before first game</p></div></a>
-    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_8cf41bfb805240f2951762c4a15d199f.docx?dn=Fiesta_All_Star_Official_Roster_2026.docx" target="_blank" class="doc-card"><div class="doc-type doc">DOC</div><div class="doc-info"><h3>Official Roster</h3><p>Signed by club administrator</p></div></a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_8cf41bfb805240f2951762c4a15d199f.docx?dn=Fiesta_All_Star_Official_Roster_2026.docx" target="_blank" class="doc-card"><div class="doc-type doc">DOC</div><div class="doc-info"><h3>Official Roster</h3><p>Word format, editable</p></div></a>
+    <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_6086681118934ee18a26c9ebc1931f73.pdf?dn=Fiesta_Official_Roster_2026_Fillable.pdf" target="_blank" class="doc-card"><div class="doc-type pdf">PDF</div><div class="doc-info"><h3>Official Roster</h3><p>Fillable PDF, type &amp; save</p></div></a>
     <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_2b9186b2d1e647469e082184fc3af840.docx?dn=FiestaMedRelease%20SINGLE%20PLAYER%5B2025%5D.docx" target="_blank" class="doc-card"><div class="doc-type doc">DOC</div><div class="doc-info"><h3>Medical Release</h3><p>Word format, editable</p></div></a>
     <a href="https://www.virginiavalorfc.org/_files/ugd/1df62c_e6b79d522a4d49ac930f363b1b0a60dd.pdf" target="_blank" class="doc-card"><div class="doc-type pdf">PDF</div><div class="doc-info"><h3>Medical Release</h3><p>PDF format, printable</p></div></a>
     
